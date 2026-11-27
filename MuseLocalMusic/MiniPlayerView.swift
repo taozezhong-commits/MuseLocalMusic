@@ -72,7 +72,7 @@ final class MiniPlayerView: UIControl, UIGestureRecognizerDelegate {
         NotificationCenter.default.removeObserver(self)
     }
 
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         guard gestureRecognizer is UITapGestureRecognizer else { return true }
         let point = gestureRecognizer.location(in: self)
         guard let hit = hitTest(point, with: nil) else { return true }
