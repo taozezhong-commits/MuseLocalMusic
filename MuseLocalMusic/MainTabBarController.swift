@@ -13,7 +13,7 @@ final class MainTabBarController: UITabBarController {
         settings.tabBarItem = UITabBarItem(title: "设置", image: UIImage(systemName: "gearshape"), tag: 2)
 
         viewControllers = [library, playlists, settings]
-        tabBar.tintColor = .systemRed
+        tabBar.tintColor = .museAccent
         tabBar.isTranslucent = true
     }
 }

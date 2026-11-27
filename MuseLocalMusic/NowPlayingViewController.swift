@@ -30,7 +30,7 @@ final class NowPlayingViewController: UIViewController {
         artwork.backgroundColor = .secondarySystemBackground
         artwork.layer.cornerRadius = 22
         artwork.clipsToBounds = true
-        artworkIcon.tintColor = .systemRed
+        artworkIcon.tintColor = .museAccent
         artworkIcon.contentMode = .scaleAspectFit
         artwork.addSubview(artworkIcon)
         artworkIcon.translatesAutoresizingMaskIntoConstraints = false
@@ -49,7 +49,7 @@ final class NowPlayingViewController: UIViewController {
         remainingLabel.font = .monospacedDigitSystemFont(ofSize: 11, weight: .regular)
         elapsedLabel.textColor = .secondaryLabel
         remainingLabel.textColor = .secondaryLabel
-        slider.minimumTrackTintColor = .systemRed
+        slider.minimumTrackTintColor = .museAccent
         slider.addTarget(self, action: #selector(sliderChanged), for: .valueChanged)
 
         let timeRow = UIStackView(arrangedSubviews: [elapsedLabel, UIView(), remainingLabel])
@@ -128,8 +128,8 @@ final class NowPlayingViewController: UIViewController {
         remainingLabel.text = "-\(format(max(0, manager.duration - manager.currentTime)))"
 
         let mode = manager.repeatMode
-        shuffleButton.tintColor = manager.isShuffleEnabled ? .systemRed : .secondaryLabel
-        repeatButton.tintColor = mode == 0 ? .secondaryLabel : .systemRed
+        shuffleButton.tintColor = manager.isShuffleEnabled ? .museAccent : .secondaryLabel
+        repeatButton.tintColor = mode == 0 ? .secondaryLabel : .museAccent
         repeatButton.setImage(UIImage(systemName: mode == 2 ? "repeat.1" : "repeat"), for: .normal)
     }
 

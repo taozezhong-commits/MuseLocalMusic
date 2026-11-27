@@ -13,7 +13,7 @@ final class MiniPlayerView: UIControl {
         layer.cornerRadius = 13
         layer.masksToBounds = true
 
-        icon.tintColor = .systemRed
+        icon.tintColor = .museAccent
         icon.contentMode = .scaleAspectFit
         titleLabel.font = .systemFont(ofSize: 14, weight: .semibold)
         subtitleLabel.font = .systemFont(ofSize: 11)

@@ -16,6 +16,8 @@
         A10000000000000000000008 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000008 /* NowPlayingViewController.swift */; };
         A10000000000000000000009 /* PlaylistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000009 /* PlaylistsViewController.swift */; };
         A1000000000000000000000A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000A /* SettingsViewController.swift */; };
+        A1000000000000000000000B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000C /* Assets.xcassets */; };
+        A1000000000000000000000C /* PlaylistStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000D /* PlaylistStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
         B10000000000000000000009 /* PlaylistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsViewController.swift; sourceTree = "<group>"; };
         B1000000000000000000000A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
         B1000000000000000000000B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        B1000000000000000000000C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+        B1000000000000000000000D /* PlaylistStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistStore.swift; sourceTree = "<group>"; };
         C10000000000000000000001 /* MuseLocalMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuseLocalMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -58,6 +62,8 @@
                 B10000000000000000000009 /* PlaylistsViewController.swift */,
                 B1000000000000000000000A /* SettingsViewController.swift */,
                 B1000000000000000000000B /* Info.plist */,
+                B1000000000000000000000C /* Assets.xcassets */,
+                B1000000000000000000000D /* PlaylistStore.swift */,
             );
         };
         D10000000000000000000003 /* Products */ = {isa = PBXGroup; children = (C10000000000000000000001 /* MuseLocalMusic.app */,); name = Products; sourceTree = "<group>"; };
@@ -93,6 +99,7 @@
             A10000000000000000000008 /* NowPlayingViewController.swift in Sources */,
             A10000000000000000000009 /* PlaylistsViewController.swift in Sources */,
             A1000000000000000000000A /* SettingsViewController.swift in Sources */,
+            A1000000000000000000000C /* PlaylistStore.swift in Sources */,
         ); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXSourcesBuildPhase section */
 
@@ -101,7 +108,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXResourcesBuildPhase section */
-        E20000000000000000000003 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+        E20000000000000000000003 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (
+            A1000000000000000000000B /* Assets.xcassets in Resources */,
+        ); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXProject section */
@@ -147,7 +156,8 @@
             SWIFT_VERSION = 5.0;
             IPHONEOS_DEPLOYMENT_TARGET = 13.0;
             TARGETED_DEVICE_FAMILY = "1,2";
-            ASSETCATALOG_COMPILER_APPICON_NAME = "";
+            ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+            ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
             ENABLE_BITCODE = NO;
         }; name = Debug; };
         F20000000000000000000004 /* Release target */ = {isa = XCBuildConfiguration; buildSettings = {
@@ -159,7 +169,8 @@
             SWIFT_VERSION = 5.0;
             IPHONEOS_DEPLOYMENT_TARGET = 13.0;
             TARGETED_DEVICE_FAMILY = "1,2";
-            ASSETCATALOG_COMPILER_APPICON_NAME = "";
+            ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+            ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
             ENABLE_BITCODE = NO;
             SWIFT_OPTIMIZATION_LEVEL = "-O";
         }; name = Release; };

@@ -5,6 +5,7 @@ final class LibraryViewController: UIViewController, UITableViewDataSource, UITa
     private let tableView = UITableView(frame: .zero, style: .insetGrouped)
     private let miniPlayer = MiniPlayerView()
     private let searchController = UISearchController(searchResultsController: nil)
+    private let emptyView = UILabel()
     private var filteredTracks: [Track] = []
     private var tracks: [Track] { LibraryStore.shared.tracks }
     private var isSearching: Bool { !(searchController.searchBar.text ?? "").isEmpty }
@@ -24,9 +25,16 @@ final class LibraryViewController: UIViewController, UITableViewDataSource, UITa
         navigationItem.searchController = searchController
         definesPresentationContext = true
 
+        emptyView.text = "还没有音乐\n点击右上角 + 从「文件」导入"
+        emptyView.numberOfLines = 0
+        emptyView.textColor = .secondaryLabel
+        emptyView.textAlignment = .center
+        emptyView.font = .systemFont(ofSize: 15)
+
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = .systemBackground
+        tableView.tintColor = .museAccent
         view.addSubview(tableView)
         view.addSubview(miniPlayer)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -89,12 +97,18 @@ final class LibraryViewController: UIViewController, UITableViewDataSource, UITa
     @objc private func refresh() {
         applyFilter()
         tableView.reloadData()
+        updateEmptyState()
         miniPlayer.refresh()
     }
 
     func updateSearchResults(for searchController: UISearchController) {
         applyFilter()
         tableView.reloadData()
+        updateEmptyState()
+    }
+
+    private func updateEmptyState() {
+        tableView.backgroundView = displayedTracks.isEmpty ? emptyView : nil
     }
 
     private func applyFilter() {

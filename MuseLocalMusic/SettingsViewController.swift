@@ -38,7 +38,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             cell.detailTextLabel?.text = "仅保存在本机 App 沙盒"
         } else {
             cell.textLabel?.text = "Muse Local Music"
-            cell.detailTextLabel?.text = "版本 1.0 · 最低支持 iOS 13"
+            cell.detailTextLabel?.text = "版本 1.1 · 最低支持 iOS 13"
         }
         cell.selectionStyle = .none
         return cell
