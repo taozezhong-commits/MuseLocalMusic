@@ -48,7 +48,7 @@
 - 删除歌曲时同步播放队列；导入/删除后即时刷新搜索结果。
 - 定时更新锁屏播放进度；处理音频中断和音频路由变化。
 - 不支持或已损坏的音频在导入时给出明确提示，不再静默写入曲库。
-- 补充 shared scheme、LaunchScreen.storyboard，CI 构建参数更明确。
+- 补充 shared scheme，CI 构建参数更明确。
 
 ## 修改 Bundle ID
 

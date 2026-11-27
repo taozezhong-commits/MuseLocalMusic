@@ -16,7 +16,6 @@
         A10000000000000000000008 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000008 /* NowPlayingViewController.swift */; };
         A10000000000000000000009 /* PlaylistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000009 /* PlaylistsViewController.swift */; };
         A1000000000000000000000A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000A /* SettingsViewController.swift */; };
-        A1000000000000000000000B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
         B10000000000000000000009 /* PlaylistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsViewController.swift; sourceTree = "<group>"; };
         B1000000000000000000000A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
         B1000000000000000000000B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        B1000000000000000000000C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
         C10000000000000000000001 /* MuseLocalMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuseLocalMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -60,7 +58,6 @@
                 B10000000000000000000009 /* PlaylistsViewController.swift */,
                 B1000000000000000000000A /* SettingsViewController.swift */,
                 B1000000000000000000000B /* Info.plist */,
-                B1000000000000000000000C /* LaunchScreen.storyboard */,
             );
         };
         D10000000000000000000003 /* Products */ = {isa = PBXGroup; children = (C10000000000000000000001 /* MuseLocalMusic.app */,); name = Products; sourceTree = "<group>"; };
@@ -104,9 +101,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXResourcesBuildPhase section */
-        E20000000000000000000003 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (
-            A1000000000000000000000B /* LaunchScreen.storyboard in Resources */,
-        ); runOnlyForDeploymentPostprocessing = 0; };
+        E20000000000000000000003 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXProject section */
