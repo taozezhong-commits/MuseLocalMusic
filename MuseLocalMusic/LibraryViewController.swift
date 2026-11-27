@@ -288,7 +288,7 @@ final class LibraryViewController: UIViewController, UITableViewDataSource, UITa
         UIView.animate(withDuration: 0.12, animations: {
             cell.transform = CGAffineTransform(scaleX: 0.96, y: 0.96)
         }, completion: { _ in
-            UIView.animate(withDuration: 0.22, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.4, animations: {
+            UIView.animate(withDuration: 0.22, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.4, animations: {
                 cell.transform = .identity
             })
             self.navigationController?.pushViewController(detail, animated: true)

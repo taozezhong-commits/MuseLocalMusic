@@ -93,7 +93,7 @@ final class PlaylistsViewController: UIViewController, UITableViewDataSource, UI
         UIView.animate(withDuration: 0.12, animations: {
             cell.transform = CGAffineTransform(scaleX: 0.97, y: 0.97)
         }, completion: { _ in
-            UIView.animate(withDuration: 0.24, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.4, animations: {
+            UIView.animate(withDuration: 0.24, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.4, animations: {
                 cell.transform = .identity
             })
             self.navigationController?.pushViewController(viewController, animated: true)
@@ -151,7 +151,7 @@ final class PlaylistDetailViewController: UIViewController, UITableViewDataSourc
         shuffleButton.setTitle(" 随机播放", for: .normal)
         playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
         playButton.setTitle(" 播放", for: .normal)
-        moreButton.setImage(UImage(systemName: "ellipsis"), for: .normal)
+        moreButton.setImage(UIImage(systemName: "ellipsis"), for: .normal)
         [shuffleButton, playButton, moreButton].forEach { $0.tintColor = .label; $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .semibold) }
         shuffleButton.addTarget(self, action: #selector(shuffleAll), for: .touchUpInside)
         playButton.addTarget(self, action: #selector(playAll), for: .touchUpInside)
