@@ -1,5 +1,4 @@
 import Foundation
-import UIKit
 
 struct Playlist: Codable, Equatable, Identifiable {
     let id: UUID
@@ -100,10 +99,4 @@ final class PlaylistStore {
 
 extension Notification.Name {
     static let playlistsDidChange = Notification.Name("MusePlaylistsDidChange")
-}
-
-extension UIColor {
-    static var museAccent: UIColor {
-        UIColor(named: "AccentColor") ?? .systemRed
-    }
 }
