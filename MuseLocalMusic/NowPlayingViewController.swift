@@ -56,7 +56,7 @@ final class NowPlayingViewController: UIViewController {
         let transport = UIStackView(arrangedSubviews: [
             makeButton("backward.end.fill", action: #selector(previous)),
             playButton,
-            makeButton("forward.end.fill", action: #selector(next))
+            makeButton("forward.end.fill", action: #selector(nextTrack))
         ])
         transport.axis = .horizontal
         transport.alignment = .center
@@ -103,7 +103,7 @@ final class NowPlayingViewController: UIViewController {
 
     @objc private func toggle() { PlaybackManager.shared.togglePlayPause(); refresh() }
     @objc private func previous() { PlaybackManager.shared.previous(); refresh() }
-    @objc private func next() { PlaybackManager.shared.next(); refresh() }
+    @objc private func nextTrack() { PlaybackManager.shared.next(); refresh() }
     @objc private func sliderChanged() { PlaybackManager.shared.seek(to: Double(slider.value)) }
     @objc private func shuffle() {
         PlaybackManager.shared.isShuffleEnabled.toggle()
